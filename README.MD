@@ -1,26 +1,31 @@
 # Mac OS code
+```
 docker run -t --rm -p 8501:8501 \
     --mount type=bind,source=//Users/nachiketh/desktop/tf-deploy/saved_models/,target=/models/saved_models \
     -e MODEL_NAME=saved_models \
     emacski/tensorflow-serving:latest
+```
 
 # Windows
-# Mac OS code
+```
 docker run -t --rm -p 8501:8501 \
     --mount type=bind,source=//Users/nachiketh/desktop/tf-deploy/saved_models/,target=/models/saved_models \
     -e MODEL_NAME=saved_models \
     tensorflow-serving:latest
 
-
+```
 #Command to Run
+```
 http://localhost:8501/v1/models/saved_models # checking the version 
-
+```
 
 #URL to use:
+```
 http://localhost:8501/v1/models/saved_models:predict
-
+````
 
 #Json Request:
+```
 {
     "instances": [
         [0.0,
@@ -809,3 +814,4 @@ http://localhost:8501/v1/models/saved_models:predict
  0.0]
     ]
 }
+```
